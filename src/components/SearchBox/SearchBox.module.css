@@ -1,7 +1,32 @@
-.searchBox {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.searchContainer {
+  position: relative;
+  margin-bottom: 20px;
 }
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #bdc3c7;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* Sol padding'i ikon için ayarla */
+  border-radius: 8px;
+  border: 1px solid #34495e;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+

@@ -9,10 +9,16 @@ const Contact = ({ id, name, number }) => {
 
   return (
     <li className={styles.contactItem}>
-      <p>
-        {name}: {number}
-      </p>
-      <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
+      <div className={styles.contactDetails}>
+        <span className={styles.contactName}>{name}</span>
+        <span className={styles.contactNumber}>{number}</span>
+      </div>
+      <button
+        className={styles.deleteButton}
+        onClick={() => dispatch(deleteContact(id))}
+      >
+        Delete
+      </button>
     </li>
   );
 };
