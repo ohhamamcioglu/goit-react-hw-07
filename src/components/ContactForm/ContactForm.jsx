@@ -8,9 +8,9 @@ const ContactForm = () => {
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    dispatch(addContact({ id: Date.now().toString(), name, number }));
+    dispatch(addContact({ name, number }));
     setName('');
     setNumber('');
   };
@@ -22,7 +22,7 @@ const ContactForm = () => {
         <input
           type="text"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={e => setName(e.target.value)}
           required
         />
       </label>
@@ -31,7 +31,7 @@ const ContactForm = () => {
         <input
           type="tel"
           value={number}
-          onChange={(e) => setNumber(e.target.value)}
+          onChange={e => setNumber(e.target.value)}
           required
         />
       </label>
