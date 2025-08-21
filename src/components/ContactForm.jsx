@@ -1,23 +1,23 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import { nanoid } from "nanoid";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { nanoid } from 'nanoid';
 
 const ContactForm = ({ onAdd }) => {
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(3, "En az 3 karakter")
-      .max(50, "En fazla 50 karakter")
-      .required("Bu alan zorunludur"),
+      .min(3, 'En az 3 karakter')
+      .max(50, 'En fazla 50 karakter')
+      .required('Bu alan zorunludur'),
     number: Yup.string()
-      .min(3, "En az 3 karakter")
-      .max(50, "En fazla 50 karakter")
-      .required("Bu alan zorunludur"),
+      .min(3, 'En az 3 karakter')
+      .max(50, 'En fazla 50 karakter')
+      .required('Bu alan zorunludur'),
   });
 
   return (
     <div className="w-[250px]">
       <Formik
-        initialValues={{ name: "", number: "" }}
+        initialValues={{ name: '', number: '' }}
         validationSchema={validationSchema}
         onSubmit={(values, actions) => {
           const newContact = {
@@ -43,7 +43,7 @@ const ContactForm = ({ onAdd }) => {
               className="text-red-600 ml-15 m-2"
               name="name"
               component="div"
-            />{" "}
+            />{' '}
           </label>
           <label htmlFor="number">
             <span className="m-4">Number</span>
@@ -58,9 +58,12 @@ const ContactForm = ({ onAdd }) => {
               className="text-red-600 ml-15 m-2"
               name="number"
               component="div"
-            />{" "}
+            />{' '}
           </label>
-          <button className="border rounded-2xl px-2 w-30 m-2 cursor-pointer hover:border-amber-500 hover:bg-amber-50 hover:text-amber-500" type="submit">
+          <button
+            className="border rounded-2xl px-2 w-30 m-2 cursor-pointer hover:border-amber-500 hover:bg-amber-50 hover:text-amber-500"
+            type="submit"
+          >
             Add Contact
           </button>
         </Form>

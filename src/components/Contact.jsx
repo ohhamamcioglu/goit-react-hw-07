@@ -1,10 +1,12 @@
-import React from "react";
-import { FiUser, FiPhone } from "react-icons/fi";
+import React from 'react';
+import { FiUser, FiPhone } from 'react-icons/fi';
 
 const Contact = ({ id, name, number, onDelete }) => {
   return (
-    <div className="border border-gray-300 p-4 rounded-md shadow-md flex items-center justify-between gap-4 w-[250px] h-[110px] bg-white/5 backdrop-blur-sm
-">
+    <div
+      className="border border-gray-300 p-4 rounded-md shadow-md flex items-center justify-between gap-4 w-[250px] h-[110px] bg-white/5 backdrop-blur-sm
+"
+    >
       <div>
         <p className="flex items-center gap-1">
           <FiUser />
