@@ -6,7 +6,7 @@ Bu, React ile oluşturulmuş basit ve modern bir telefon rehberi yönetimi uygul
 
 Dağıtım bağlarını burada paylaşın (Vercel):
 
-- Uygulama: <Vercel canlı URL>
+- Uygulama: [<Vercel canlı URL>](https://goit-react-hw-07-pearl-chi.vercel.app/)
 - Kaynak kod: https://github.com/<kullanici>/goit-react-hw-07
 
 ## Özellikler
